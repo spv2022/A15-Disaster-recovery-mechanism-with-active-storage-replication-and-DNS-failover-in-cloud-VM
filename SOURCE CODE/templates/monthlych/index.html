@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div style="color: black;margin-top: 5%;padding: 1%;">
+    <h4 style="padding: 1%; color: red;"> {{ data }} </h4>
+    <img src="{% static 'images/images.png' %}" alt=" image here " 
+    height="100px" width="100px" style="border-radius: 50%;float: right;">
+    
+    <h2>Welcome to the DNS Failover Testing page. <br>Connected Server details: <br></h2> <h3 style="color: darkblue;"><b>{{ regdata }}</b> </h3>
+    <ul>
+        <li >
+         The above host name and host IP address will change based on the Active server
+        </li>
+        <li >
+            For Your information please find the IP address of our Production and Backup server 
+            <br>
+                &nbsp;&nbsp;&nbsp; Production Server: 104.211.9.209 (10.0.0.4) Name : Dnsprodvm<br>
+                &nbsp;&nbsp;&nbsp; Backup server: 20.124.99.148 (10.0.0.5) Name: DnsCNRvm
+            
+        </li>
+    </ul>
+    
+</div>
+{% endblock %}
